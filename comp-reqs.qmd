@@ -12,7 +12,7 @@ format:
 The MEDS program requires all students to have a personal laptop to use during the program. Our curriculum is designed to work across different operating systems and computers, as long as they meet some minimum requirements.  
 
 ### Specifically, your computer should:  {#req-comp-specs}
-- be no more than 4 years old, and in any case be fully supported by the manufacturer. For example, [Apple won't repair anything that's more than 7 years old](https://support.apple.com/en-us/HT201624)   
+- be no more than 8 years old, and in any case be fully supported by the manufacturer. For example, [Apple won't repair anything that's more than 7 years old](https://support.apple.com/en-us/HT201624)   
 - be running Windows, macOS, or Linux (Please note that we offer limited support for Linux)  
 - have at least 50 GB storage space available for MEDS applications and coursework  
 - have at least 16 GB of RAM (the more the better!)  
