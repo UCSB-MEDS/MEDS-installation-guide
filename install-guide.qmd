@@ -9,59 +9,43 @@ format:
     smooth-scroll: true
 ---
 
-### 1. Install or update R {#install-R}
+### 1. Install R {#install-R}
 
 Visit [cloud.r-project.org](https://cloud.r-project.org/) to download the most recent version of R for your operating system. You should have *at least* version 4.4.0 (released 2024-04-24) running when you start MEDS.
 
-### 2. Install or update RStudio {#install-RStudio}
+### 2. Install Command Line Tools & XQuartz (Mac only)
 
-While R is a programming language, RStudio is a software (often referred to as an IDE, **I**ntegrated **D**evelopment **E**nvironment) that provides R programmers with a neat, easy-to-use interface for coding in R. There are a number of IDEs out there, but RStudio is arguably the best and definitely most popular among R programmers.
+{{< fa brands apple >}} Mac users should install the following tools, which are required for some R package installations:
 
-:::: callout-note
-## NOTE: You need *both* R and RStudio installed
+-   **Command Line Tools:** Run `xcode-select --install` in the Positron Terminal
+-   **XQuartz:** Download from [xquartz.org](https://www.xquartz.org/){target="_blank"}
 
-RStudio will not work without R installed, and you won't particularly enjoy using R without having RStudio installed. Be sure to install *both*!
+*{{< fa brands windows >}} Windows users: Command Line Tools are pre-installed and XQuartz is not required.*
 
-```{r}
-#| echo: false
-#| fig-align: "center"
-knitr::include_graphics("images/R_RStudio.png")
-```
 
-::: {.center-text .gray-text}
-Image Credit: [Exploratory Data Analysis in R](https://mgimond.github.io/ES218/), by Manny Gimond
-:::
-::::
+### 3. Install Positron {#install-Positron}
 
--   **New install:** To install RStudio, visit [rstudio.com/products/rstudio/](https://www.rstudio.com/products/rstudio/). Download the free (“Open Source Edition”) Desktop version for your operating system. You should install the most up-to-date version available that is supported by your operating system.
+While R is a programming language, Positron is a software application (often referred to as an IDE, **I**ntegrated **D**evelopment **E**nvironment) that provides a user-friendly workspace for writing and running code. In addition to R, Positron also supports Python and other programming languages, making it a flexible tool for data science and scientific computing. If you've used RStudio in the past, you'll notice a lot of similar features in Positron (it was created by the company behind RStudio, Posit!), as well as improved support for multiple languages and newer development tools.
 
--   **Update:** If you already have RStudio and need to update, open RStudio, and under *Help* (in the top menu), choose *Check for updates*. If you have the most recent release, it will return *No update available. You are running the most recent version of RStudio*. Otherwise, you should follow the instructions to install an updated version.
-
--   Open RStudio (click on the logo shown below):
+To install Positron, visit [positron.posit.co/install](https://positron.posit.co/install.html) and follow the instructions. If you already have Positron installed, it'll automatically check for updates from Posit's channel of monthly releases and install the new version in the background. To open Positron, click on the app logo that looks like:
 
 ```{r}
 #| echo: false
 #| fig-align: "center"
 #| out-width: "15%"
-knitr::include_graphics("images/rstudio-logo.png")
+knitr::include_graphics("images/positron-logo.png")
 ```
 
-::: callout-note
-## Note for {{< fa brands apple >}} *Mac* users: you may need to install command line tools and XQuartz.
+### 4. Install VS Code {#install-vscode}
 
-**If upon opening RStudio you are prompted to install Command Line Tools, do it.**
+Visual Studio Code (aka VS Code) is another language-agnostic IDE. It works and looks a lot like Positron (Positron is actually built off VS Code), and is still widely-used by many Python developers. You'll practice using VS Code in some of your classes as well. [Download VS Code for your operating system](https://code.visualstudio.com/download).
 
--   **To install command line tools** (if you’re not automatically prompted), run `xcode-select --install` in the RStudio Terminal
--   **To install XQuartz,** visit [xquartz.org](https://www.xquartz.org/)
-
-*(Note for* {{< fa brands windows >}} *Windows users: Windows machines should already have command line tools installed, and XQuartz is only required for Macs).*
-:::
-
-### 3. Install Quarto *if necessary* (automatically installed with RStudio) {#Quarto}
-
-Quarto is a scientific publishing tool built on Pandoc that allows R, Python, Julia, and ObservableJS users to create dynamic documents, websites, books and more.
-
-Quarto is included with RStudio v2022.07.1+ **so there no need for a separate download/install** if you have the latest version of RStudio! You can find all releases (current, pre, and older releases) on the Quarto website [download page](https://quarto.org/docs/download/), should you want/need to reference them.
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| out-width: "15%"
+knitr::include_graphics("images/vs-code.png")
+```
 
 ### 4. Check for git {#check-git}
 
@@ -338,17 +322,6 @@ If it returns any information, you're all set. If it still doesn't recognize it,
 
 :::
 ::::
-
-### 9. Install VS Code {#install-vscode}
-
-Visual Studio Code (aka VS Code) is a language-agnostic source-code editor -- it's works similarly to RStudio, but allows users to install extensions which add support for *lots* of different languages, debuggers, tools, etc. [Download VS Code for your operating system here](https://code.visualstudio.com/download).
-
-```{r}
-#| echo: false
-#| fig-align: "center"
-#| out-width: "40%"
-knitr::include_graphics("images/vs-code.png")
-```
 
 ### 10. Install Cyberduck {#install-Cyberduck}
 
