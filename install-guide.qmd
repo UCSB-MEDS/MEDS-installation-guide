@@ -13,16 +13,6 @@ format:
 
 Visit [cloud.r-project.org](https://cloud.r-project.org/) to download the most recent version of R for your operating system. You should have *at least* version 4.4.0 (released 2024-04-24) running when you start MEDS.
 
-### 2. Install Command Line Tools & XQuartz (Mac only)
-
-{{< fa brands apple >}} Mac users should install the following tools, which are required for some R package installations:
-
--   **Command Line Tools:** Run `xcode-select --install` in the Positron Terminal
--   **XQuartz:** Download from [xquartz.org](https://www.xquartz.org/){target="_blank"}
-
-*{{< fa brands windows >}} Windows users: Command Line Tools are pre-installed and XQuartz is not required.*
-
-
 ### 3. Install Positron {#install-Positron}
 
 While R is a programming language, Positron is a software application (often referred to as an IDE, **I**ntegrated **D**evelopment **E**nvironment) that provides a user-friendly workspace for writing and running code. In addition to R, Positron also supports Python and other programming languages, making it a flexible tool for data science and scientific computing. If you've used RStudio in the past, you'll notice a lot of similar features in Positron (it was created by the company behind RStudio, Posit!), as well as improved support for multiple languages and newer development tools.
@@ -35,6 +25,15 @@ To install Positron, visit [positron.posit.co/install](https://positron.posit.co
 #| out-width: "15%"
 knitr::include_graphics("images/positron-logo.png")
 ```
+
+### 2. Install Command Line Tools & XQuartz (Mac only)
+
+{{< fa brands apple >}} Mac users should install the following tools, which are required for some R package installations:
+
+-   **Command Line Tools:** Run `xcode-select --install` in the Positron Terminal
+-   **XQuartz:** Download from [xquartz.org](https://www.xquartz.org/){target="_blank"}
+
+*{{< fa brands windows >}} Windows users: Command Line Tools are pre-installed and XQuartz is not required.*
 
 ### 4. Install VS Code {#install-vscode}
 
