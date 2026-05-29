@@ -91,14 +91,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#install" id="toc-install" class="nav-link active" data-scroll-target="#install"><i class="fa-solid fa-download" aria-label="download"></i> Installation Guide</a>
   <ul class="collapse">
   <li><a href="#install-R" id="toc-install-R" class="nav-link" data-scroll-target="#install-R">1. Install R</a></li>
-  <li><a href="#install-command-line-tools-xquartz-mac-only" id="toc-install-command-line-tools-xquartz-mac-only" class="nav-link" data-scroll-target="#install-command-line-tools-xquartz-mac-only">2. Install Command Line Tools &amp; XQuartz (Mac only)</a></li>
-  <li><a href="#install-Positron" id="toc-install-Positron" class="nav-link" data-scroll-target="#install-Positron">3. Install Positron</a></li>
-  <li><a href="#install-vscode" id="toc-install-vscode" class="nav-link" data-scroll-target="#install-vscode">4. Install VS Code</a></li>
-  <li><a href="#check-git" id="toc-check-git" class="nav-link" data-scroll-target="#check-git">4. Check for git</a></li>
-  <li><a href="#GitHub" id="toc-GitHub" class="nav-link" data-scroll-target="#GitHub">5. Create a GitHub account</a></li>
-  <li><a href="#configure-git" id="toc-configure-git" class="nav-link" data-scroll-target="#configure-git">6. Configure git</a></li>
-  <li><a href="#GitHub-PAT" id="toc-GitHub-PAT" class="nav-link" data-scroll-target="#GitHub-PAT">7. Store your GitHub personal access token (PAT)</a></li>
-  <li><a href="#install-Anaconda" id="toc-install-Anaconda" class="nav-link" data-scroll-target="#install-Anaconda">8. Install Anaconda</a></li>
+  <li><a href="#install-Positron" id="toc-install-Positron" class="nav-link" data-scroll-target="#install-Positron">2. Install Positron</a></li>
+  <li><a href="#mac-users-only-install-command-line-tools-xquartz" id="toc-mac-users-only-install-command-line-tools-xquartz" class="nav-link" data-scroll-target="#mac-users-only-install-command-line-tools-xquartz">3. <em>(Mac users only)</em> Install Command Line Tools &amp; XQuartz</a></li>
+  <li><a href="#install-Anaconda" id="toc-install-Anaconda" class="nav-link" data-scroll-target="#install-Anaconda">4. Install Python via the Anaconda distribution</a></li>
+  <li><a href="#install-vscode" id="toc-install-vscode" class="nav-link" data-scroll-target="#install-vscode">5. Install VS Code</a></li>
+  <li><a href="#GitHub" id="toc-GitHub" class="nav-link" data-scroll-target="#GitHub">6. Create a GitHub account</a></li>
+  <li><a href="#check-git" id="toc-check-git" class="nav-link" data-scroll-target="#check-git">7. Check for git</a></li>
+  <li><a href="#configure-git" id="toc-configure-git" class="nav-link" data-scroll-target="#configure-git">8. Configure git</a></li>
+  <li><a href="#GitHub-PAT" id="toc-GitHub-PAT" class="nav-link" data-scroll-target="#GitHub-PAT">9. Store your GitHub personal access token (PAT)</a></li>
   <li><a href="#install-Cyberduck" id="toc-install-Cyberduck" class="nav-link" data-scroll-target="#install-Cyberduck">10. Install Cyberduck</a></li>
   <li><a href="#install-VPN" id="toc-install-VPN" class="nav-link" data-scroll-target="#install-VPN">11. Install UCSB’s Ivanti Campus VPN (Virtual Private Network)</a></li>
   <li><a href="#Slack" id="toc-Slack" class="nav-link" data-scroll-target="#Slack">12. Create your Slack account and join MEDS</a></li>
@@ -156,21 +156,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="install"><i class="fa-solid fa-download" aria-label="download"></i> Installation Guide</h2>
 <section id="install-R" class="level3">
 <h3 class="anchored" data-anchor-id="install-R">1. Install R</h3>
-<p>Visit <a href="https://cloud.r-project.org/">cloud.r-project.org</a> to download the most recent version of R for your operating system. You should have <em>at least</em> version 4.4.0 (released 2024-04-24) running when you start MEDS.</p>
-</section>
-<section id="install-command-line-tools-xquartz-mac-only" class="level3">
-<h3 class="anchored" data-anchor-id="install-command-line-tools-xquartz-mac-only">2. Install Command Line Tools &amp; XQuartz (Mac only)</h3>
-<p><i class="fa-brands fa-apple" aria-label="apple"></i> Mac users should install the following tools, which are required for some R package installations:</p>
-<ul>
-<li><strong>Command Line Tools:</strong> Run <code>xcode-select --install</code> in the Positron Terminal</li>
-<li><strong>XQuartz:</strong> Download from <a href="https://www.xquartz.org/" target="_blank">xquartz.org</a></li>
-</ul>
-<p><em><i class="fa-brands fa-windows" aria-label="windows"></i> Windows users: Command Line Tools are pre-installed and XQuartz is not required.</em></p>
+<p>Download the latest version of R for your operating system at <a href="https://cloud.r-project.org/" target="_blank">cloud.r-project.org</a>. If you already have R installed, simply reinstall to update.</p>
+<!-- You should have *at least* version 4.4.0 (released 2024-04-24) running when you start MEDS. -->
 </section>
 <section id="install-Positron" class="level3">
-<h3 class="anchored" data-anchor-id="install-Positron">3. Install Positron</h3>
-<p>While R is a programming language, Positron is a software application (often referred to as an IDE, <strong>I</strong>ntegrated <strong>D</strong>evelopment <strong>E</strong>nvironment) that provides a user-friendly workspace for writing and running code. In addition to R, Positron also supports Python and other programming languages, making it a flexible tool for data science and scientific computing. If you’ve used RStudio in the past, you’ll notice a lot of similar features in Positron (it was created by the company behind RStudio, Posit!), as well as improved support for multiple languages and newer development tools.</p>
-<p>To install Positron, visit <a href="https://positron.posit.co/install.html">positron.posit.co/install</a> and follow the instructions. If you already have Positron installed, it’ll automatically check for updates from Posit’s channel of monthly releases and install the new version in the background. To open Positron, click on the app logo that looks like:</p>
+<h3 class="anchored" data-anchor-id="install-Positron">2. Install Positron</h3>
+<p>While R is a programming language, Positron is a software application (often referred to as an IDE, <strong>I</strong>ntegrated <strong>D</strong>evelopment <strong>E</strong>nvironment) that provides a user-friendly workspace for writing and running code. In addition to R, Positron also supports Python and other programming languages, making it a flexible tool for data science and scientific computing. If you’ve used RStudio in the past, you’ll notice a lot of similar features in Positron (it was created by the company behind RStudio, <a href="https://posit.co/!%7Btarget=%22_blank%22%7D">Posit</a>), as well as improved support for multiple languages and newer development tools.</p>
+<p>To install Positron, visit <a href="https://positron.posit.co/install.html" target="_blank">positron.posit.co/install</a> and follow the instructions. If you already have Positron installed, it’ll automatically check for updates from Posit’s channel of monthly releases and install the new version in the background. To open Positron, click on the app logo that looks like:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -180,254 +172,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-</section>
-<section id="install-vscode" class="level3">
-<h3 class="anchored" data-anchor-id="install-vscode">4. Install VS Code</h3>
-<p>Visual Studio Code (aka VS Code) is another language-agnostic IDE. It works and looks a lot like Positron (Positron is actually built off VS Code), and is still widely-used by many Python developers. You’ll practice using VS Code in some of your classes as well. <a href="https://code.visualstudio.com/download">Download VS Code for your operating system</a>.</p>
+<p>Several of the following installation steps will ask you to run commands in the Positron Terminal. You can find it next to the Console in Positron’s Panel (bottom center of the IDE):</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/vs-code.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:15.0%"></p>
+<p><img src="images/positron-map.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="A map of the Positron IDE, showing the activity bar and primary side bar to the left, the secondary side by to the right, the editor at center top, and the Panel at center bottom"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="check-git" class="level3">
-<h3 class="anchored" data-anchor-id="check-git">4. Check for git</h3>
-<p>You should already have git on your device, but let’s check for it anyway.</p>
+<section id="mac-users-only-install-command-line-tools-xquartz" class="level3">
+<h3 class="anchored" data-anchor-id="mac-users-only-install-command-line-tools-xquartz">3. <em>(Mac users only)</em> Install Command Line Tools &amp; XQuartz</h3>
+<p><i class="fa-brands fa-apple" aria-label="apple"></i> Mac users should install the following tools, which are required for some R package installations:</p>
 <ul>
-<li><p>Open RStudio</p></li>
-<li><p>In the Terminal, run the following command (choose the option for your operating system):</p></li>
+<li><strong>Command Line Tools:</strong> Run <code>xcode-select --install</code> in the Positron Terminal</li>
+<li><strong>XQuartz:</strong> Download from <a href="https://www.xquartz.org/" target="_blank">xquartz.org</a></li>
 </ul>
+<p><em><i class="fa-brands fa-windows" aria-label="windows"></i> Windows users: Command Line Tools are pre-installed and XQuartz is not required.</em></p>
+</section>
+<section id="install-Anaconda" class="level3">
+<h3 class="anchored" data-anchor-id="install-Anaconda">4. Install Python via the Anaconda distribution</h3>
+<p>Anaconda is a distribution of the Python programming language that aims to simplify package management and deployment. You’ll need to download the Graphical Installer, which provides a graphical user interface (GUI) to facilitate writing code. Choose the option for your operating system:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href=""><i class="fa-brands fa-apple" aria-label="apple"></i> Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href=""><i class="fa-brands fa-windows" aria-label="windows"></i> Windows</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div class="cell">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>RStudio Terminal</strong></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span> git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="cell">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>RStudio Terminal</strong></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">where</span> git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<ul>
-<li>If you get something that looks like a file path to git on your computer (e.g.&nbsp;<code>/usr/local/bin/git</code> on a Mac, <code>C:\Program Files\Git\mingw64\bin\git.exe</code> on Windows, though it could differ slightly on your computer), then you have git installed. If you instead get no response at all, you should download &amp; install git here: <a href="https://git-scm.com/downloads">git-scm.com/downloads</a></li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span><strong>An aside:</strong> We’ll be using git <em>a lot</em> throughout MEDS.
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>GitHub’s <a href="https://github.com/git-guides">Git Guides</a> are a really wonderful resource to refer to!</p>
-</div>
-</div>
-</section>
-<section id="GitHub" class="level3">
-<h3 class="anchored" data-anchor-id="GitHub">5. Create a GitHub account</h3>
-<ul>
-<li>If you don’t already have a GitHub account, go to <a href="https://github.com" class="uri">https://github.com</a> and create one. Check out Jenny Bryan’s <a href="https://happygitwithr.com/github-acct.html">Happy Git with R, Ch. 4</a> for some helpful considerations when choosing a username. We suggest that you use a <em>personal email</em> or your <span class="citation" data-cites="bren.ucsb.edu">@bren.ucsb.edu</span> email when setting up your account (rather than your <span class="citation" data-cites="ucsb.edu">@ucsb.edu</span> <em>email</em>, which will be deactivated after you graduate).</li>
-</ul>
-</section>
-<section id="configure-git" class="level3">
-<h3 class="anchored" data-anchor-id="configure-git">6. Configure git</h3>
-<ul>
-<li>In RStudio, open the Terminal. Run the following commands (by pressing <strong>return</strong> after each line). Be sure to replace the username (keep the quotation marks!) with <em>your</em> GitHub username and the email with the email you used for your GitHub account.</li>
-</ul>
-<div class="cell">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>RStudio Terminal</strong></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Jane Doe"</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email janedoe@example.com</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-<ul>
-<li>Then, in the Terminal run the following, and carefully check that the name and email returned match your GitHub information:</li>
-</ul>
-<div class="cell">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>RStudio Terminal</strong></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--list</span> <span class="at">--global</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>IMPORTANT: If you’re configuring git on a <strong>Bren server</strong> (e.g.&nbsp;workbench-1.bren.ucsb.edu or workbench-2.bren.ucsb.edu), you must also run the following in the Terminal
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="cell">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>RStudio Terminal</strong></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper <span class="st">'cache --timeout=10000000'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-<p>This prevents important credentials (e.g.&nbsp;a GitHub Personal Access Token, PAT, which you’ll set in step #7) from being removed from the server’s memory. You <strong>do not</strong> need to complete this step when configuring git on your local computer.</p>
-</div>
-</div>
-</section>
-<section id="GitHub-PAT" class="level3">
-<h3 class="anchored" data-anchor-id="GitHub-PAT">7. Store your GitHub personal access token (PAT)</h3>
-<p><strong>First:</strong> What even is a personal access token? From GitHub’s documentation:</p>
-<blockquote class="blockquote">
-<p>Personal access tokens (PATs) are an alternative to using passwords for authentication to GitHub when using the <a href="https://docs.github.com/en/rest/overview/other-authentication-methods#via-oauth-and-personal-access-tokens">GitHub API</a> or the <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#using-a-token-on-the-command-line">command line</a>.</p>
-</blockquote>
-<p>This means that in order to push your work (files, scripts, etc.) from your laptop (or any other computer) to GitHub, you’ll need to first to generate a PAT. <strong>Importantly, you’ll need to generate a PAT for each computer you wish to work from.</strong> For example, we will complete the following steps to create a PAT for your personal laptop, but you’ll also need to create a PAT if/when you choose to work on a second computer at home or any of the Bren servers. Good news is that you can follow these same steps when you’re ready to set up additional PATs on other machines. For now, let’s get a PAT for our personal laptop squared away:</p>
-<ul>
-<li>Once you have git configured successfully, install the <code>{usethis}</code> package in R by running the following in the RStudio Console:</li>
-</ul>
-<div class="cell">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>RStudio Console</strong></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(“usethis”)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-<p>A lot of scary looking red text will show up while this is installing - don’t panic. If you get to the end and see something like below (with no error) it’s installed successfully.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/install-pkg-success.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="520"></p>
-</figure>
-</div>
-</div>
-</div>
-<ul>
-<li>Run the following in the RStudio Console:</li>
-</ul>
-<div class="cell">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>RStudio Console</strong></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>() </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-<ul>
-<li>Enter your GitHub password if/when prompted. You’ll be taken to a screen that looks like this:</li>
-</ul>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/new-pat.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1000"></p>
-</figure>
-</div>
-</div>
-</div>
-<ul>
-<li><p>In the <strong>Note</strong> field, you should see some autopopulated text: <code>R:GITHUB_PAT</code>. We suggest changing this to something that signifies what machine it’s being used for. For example, if you are generating a PAT for your laptop, you might choose to rename it, <code>My Personal Laptop</code>.</p></li>
-<li><p>Next, you’ll see a section called <strong>Select scopes</strong> with reasonable options already selected for you. Do not change anything. Just scroll down to the bottom of that page and click the green <strong>Generate token</strong> button:</p></li>
-</ul>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/generate-token.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="615"></p>
-</figure>
-</div>
-</div>
-</div>
-<ul>
-<li><p>Copy the generated PAT to your clipboard</p></li>
-<li><p>Back in RStudio, run the following in the Console:</p></li>
-</ul>
-<div class="cell">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>RStudio Console</strong></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-<p>This will prompt you to paste the PAT you just copied from GitHub. Paste the PAT, press Enter to run. You should see something like this show up if all is well so far (you’ll have pasted your PAT where the example below says “REDACTED”):</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/gitcreds-set.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="489"></p>
-</figure>
-</div>
-</div>
-</div>
-<ul>
-<li>In the RStudio Console, run:</li>
-</ul>
-<div class="cell">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>RStudio Console</strong></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">git_sitrep</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-<p>Does it return information about your connected GitHub account that looks something like below? Great! You’ve configured git and successfully stored your PAT.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/git_sitrep.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="469"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span><strong>A note on expiring tokens:</strong>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Setting an expiration date on personal access tokens is highly recommended in order to keep your information secure. GitHub will send you an email when it’s time to regenerate a token that’s about to expire. Follow the email prompts, then use <code>gitcreds::gitcreds_set()</code> to reset your token.</p>
-</div>
-</div>
-</section>
-<section id="install-Anaconda" class="level3">
-<h3 class="anchored" data-anchor-id="install-Anaconda">8. Install Anaconda</h3>
-<p>Anaconda is a distribution of the Python and R programming languages that aims to simplify package management and deployment. You’ll need to download the Graphical Installer, which provides a graphical user interface (GUI) to facilitate writing code. Choose the option for your operating system:</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href=""><i class="fa-brands fa-apple" aria-label="apple"></i> Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href=""><i class="fa-brands fa-windows" aria-label="windows"></i> Windows</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <p>Click here to download Graphical Installer for MacOS:</p>
 <ul>
-<li><p><a href="https://repo.anaconda.com/archive/Anaconda3-2025.06-0-MacOSX-arm64.pkg">For Apple Silicon Chip (M1, M2, etc.)</a></p></li>
-<li><p><a href="https://repo.anaconda.com/archive/Anaconda3-2025.06-0-MacOSX-x86_64.pkg">For Intel Chip</a></p></li>
+<li><p><a href="https://repo.anaconda.com/archive/Anaconda3-2025.06-0-MacOSX-arm64.pkg" target="_blank">For Apple Silicon Chip (M1, M2, etc.)</a></p></li>
+<li><p><a href="https://repo.anaconda.com/archive/Anaconda3-2025.06-0-MacOSX-x86_64.pkg" target="_blank">For Intel Chip</a></p></li>
 </ul>
 <p>This might pop open a new tab with a “redirecting you to…” phrase, but Anaconda should be downloading at the same time. It might take a couple minutes. After it’s downloaded, click it and hit Allow if you see the following:</p>
 <div class="cell" data-layout-align="center">
@@ -441,8 +216,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Follow the installation steps to complete Anaconda installation. You will accept all default settings.</p>
 </div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<p><a href="https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Windows-x86_64.exe">Click here to download the 64-bit Graphical Installer Anaconda for Windows</a>. Run the executable to install, which will look something like this:</p>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><a href="https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Windows-x86_64.exe" target="_blank">Click here to download the 64-bit Graphical Installer Anaconda for Windows</a>. Run the executable to install, which will look something like this:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -495,64 +270,64 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>By default, installation should add “conda” to your system path so you should not have any issues. Run the following to confirm:</p>
+<p>By default, installation should add “conda” to your system path so you should not have any issues. Open Positron and run the following in the Terminal to confirm:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>RStudio Terminal</strong></pre>
+<pre><strong>Positron Terminal</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> info</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> info</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <ul>
 <li><p>If it returns any information, you’re all set.</p></li>
-<li><p>If it returns “bash: conda: command not found”, conda was not added to your system path. You’ll need to modify your shell profile to add conda to your system path by following the steps below.</p></li>
+<li><p>If it returns <code>bash: conda: command not found</code>, conda was not added to your system path. You’ll need to modify your shell profile to add conda to your system path by following the steps below.</p></li>
 </ul>
 <section id="troubleshooting-steps" class="level4">
 <h4 class="anchored" data-anchor-id="troubleshooting-steps">Troubleshooting steps</h4>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href=""><i class="fa-brands fa-apple" aria-label="apple"></i> Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href=""><i class="fa-brands fa-windows" aria-label="windows"></i> Windows</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href=""><i class="fa-brands fa-apple" aria-label="apple"></i> Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href=""><i class="fa-brands fa-windows" aria-label="windows"></i> Windows</a></li></ul>
 <div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<p>Run the following to initialize conda, which will add “conda” to your shell profile:</p>
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Open Positron and run the following in the Terminal to initialize conda. This will add “conda” to your shell profile:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>RStudio Terminal</strong></pre>
+<pre><strong>Positron Terminal</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">~/opt/anaconda3/bin/conda</span> init </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">~/opt/anaconda3/bin/conda</span> init </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <p>It should return a list of modifications. If successful, move onto the next commands:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>RStudio Terminal</strong></pre>
+<pre><strong>Positron Terminal</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.bash_profile</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.bash_profile</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <p>If it returns any information, you’re all set. If it still doesn’t recognize it, ask for help.</p>
 </div>
-<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<p>Run the following to initialize conda, which will add “conda” to your shell profile:</p>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Open Positron and run the following in the Terminal to initialize conda. This will add “conda” to your shell profile:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>RStudio Terminal</strong></pre>
+<pre><strong>Positron Terminal</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/c/ProgramData/anaconda3/Scripts/conda.exe</span> init bash</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/c/ProgramData/anaconda3/Scripts/conda.exe</span> init bash</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <p>It should return a list of modifications. If successful, move onto the next commands:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>RStudio Terminal</strong></pre>
+<pre><strong>Positron Terminal</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.bash_profile</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.bash_profile</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <p>If it returns any information, you’re all set. If it still doesn’t recognize it, ask for help.</p>
@@ -560,22 +335,249 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
+</div>
+</div>
+</section>
+<section id="install-vscode" class="level3">
+<h3 class="anchored" data-anchor-id="install-vscode">5. Install VS Code</h3>
+<p>Visual Studio Code (aka VS Code) is another language-agnostic IDE. It works and looks a lot like Positron (Positron is actually built off VS Code), and is still widely-used by many Python developers. You’ll practice using VS Code in some of your classes. <a href="https://code.visualstudio.com/download" target="_blank">Download VS Code for your operating system</a>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/vs-code.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:15.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="GitHub" class="level3">
+<h3 class="anchored" data-anchor-id="GitHub">6. Create a GitHub account</h3>
+<p>GitHub is a cloud-based platform where data scientists and developers can store, share, and collaborate on code. If you don’t already have a GitHub account, go to <a href="https://github.com" target="_blank">https://github.com</a> and create one. Check out Jenny Bryan’s <a href="https://happygitwithr.com/github-acct.html" target="_blank">Happy Git with R, Ch. 4</a> for some helpful considerations when choosing a username. We suggest that you use a <em>personal email</em>, rather than a school or work email (which may become deactivated after you graduate or change jobs).</p>
+<!-- when setting up your account (rather than your @ucsb.edu *email*, which will be deactivated after you graduate). -->
+</section>
+<section id="check-git" class="level3">
+<h3 class="anchored" data-anchor-id="check-git">7. Check for git</h3>
+<p>Git is a version control system that lives on our local computer(s) and is used to track and manage changes to files (mostly source code). You should already have git on your device, but let’s check for it anyway.</p>
+<ul>
+<li>Open Positron. In the Terminal, run the following command (choose the option for your operating system):</li>
+</ul>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href=""><i class="fa-brands fa-apple" aria-label="apple"></i> Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href=""><i class="fa-brands fa-windows" aria-label="windows"></i> Windows</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Positron Terminal</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span> git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Positron Terminal</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">where</span> git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>If you get something that looks like a file path to git on your computer (e.g.&nbsp;<code>/usr/local/bin/git</code> on a Mac, <code>C:\Program Files\Git\mingw64\bin\git.exe</code> on Windows, though it could differ slightly on your computer), then you have git installed. If you instead get no response at all, you should download &amp; install git here: <a href="https://git-scm.com/downloads" target="_blank">git-scm.com/downloads</a></li>
+</ul>
+<!-- ::: callout-note
+## **An aside:** We'll be using git *a lot* throughout MEDS.
+
+GitHub's [Git Guides](https://github.com/git-guides) are a really wonderful resource to refer to!
+::: -->
+</section>
+<section id="configure-git" class="level3">
+<h3 class="anchored" data-anchor-id="configure-git">8. Configure git</h3>
+<ul>
+<li>Open Positron. In the Terminal, run the following commands (by pressing <strong>return</strong> after each line). Be sure to replace the username (keep the quotation marks!) with <em>your</em> GitHub username and the email with the email you used for your GitHub account.</li>
+</ul>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Positron Terminal</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Jane Doe"</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email janedoe@example.com</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<ul>
+<li>Then, in the Terminal run the following, and carefully check that the name and email returned match your GitHub information:</li>
+</ul>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Positron Terminal</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--list</span> <span class="at">--global</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>IMPORTANT: If you’re configuring git on a <strong>Bren server</strong>, you must also run the following in the Terminal
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Our Bren servers are <code>workbench-1.bren.ucsb.edu</code> and <code>workbench-2.bren.ucsb.edu</code>.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Positron Terminal</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper <span class="st">'cache --timeout=10000000'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<p>This prevents important credentials (e.g.&nbsp;a GitHub Personal Access Token, PAT, which you’ll set in step #9) from being removed from the server’s memory. You <strong>do not</strong> need to complete this step when configuring git on your local computer.</p>
+</div>
+</div>
+</section>
+<section id="GitHub-PAT" class="level3">
+<h3 class="anchored" data-anchor-id="GitHub-PAT">9. Store your GitHub personal access token (PAT)</h3>
+<p><strong>First:</strong> What even is a personal access token? From GitHub’s documentation:</p>
+<blockquote class="blockquote">
+<p>Personal access tokens (PATs) are an alternative to using passwords for authentication to GitHub when using the <a href="https://docs.github.com/en/rest/overview/other-authentication-methods#via-oauth-and-personal-access-tokens">GitHub API</a> or the <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#using-a-token-on-the-command-line">command line</a>.</p>
+</blockquote>
+<p>This means that in order to push your work (files, scripts, etc.) from your laptop (or any other computer) to GitHub, you’ll need to first to generate a PAT. <strong>Importantly, you’ll need to generate a PAT for each computer you wish to work from.</strong> For example, we will complete the following steps to create a PAT for your personal laptop, but you’ll also need to create a PAT if/when you choose to work on a second computer at home or any of the Bren servers. Good news is that you can follow these same steps when you’re ready to set up additional PATs on other machines. For now, let’s get a PAT for our personal laptop squared away:</p>
+<ul>
+<li>Once you have git configured successfully, install the <code>{usethis}</code> package in R by running the following in the Positron Console:</li>
+</ul>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Positron Console</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(“usethis”)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<p>A lot of scary looking red text will show up while this is installing - don’t panic. If you get to the end and see something like below (with no error) it’s installed successfully.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/install-pkg-success.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="520"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>Run the following in the Positron Console:</li>
+</ul>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Positron Console</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>() </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<ul>
+<li>Enter your GitHub password if/when prompted. You’ll be taken to a screen that looks like this:</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/new-pat.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1000"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><p>In the <strong>Note</strong> field, you should see some autopopulated text: <code>R:GITHUB_PAT</code>. We suggest changing this to something that signifies what machine it’s being used for. For example, if you are generating a PAT for your laptop, you might choose to rename it, <code>My Personal Laptop</code>.</p></li>
+<li><p>Next, you’ll see a section called <strong>Select scopes</strong> with reasonable options already selected for you. Do not change anything. Just scroll down to the bottom of that page and click the green <strong>Generate token</strong> button:</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/generate-token.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="615"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><p>Copy the generated PAT to your clipboard</p></li>
+<li><p>Back in Positron, run the following in the Console:</p></li>
+</ul>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Positron Console</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<p>This will prompt you to paste the PAT you just copied from GitHub. Paste the PAT, press Enter to run. You should see something like this show up if all is well so far (you’ll have pasted your PAT where the example below says “REDACTED”):</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/gitcreds-set.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="489"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>In the Positron Console, run:</li>
+</ul>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Positron Console</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">git_sitrep</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<p>Does it return information about your connected GitHub account that looks something like below? Great! You’ve configured git and successfully stored your PAT.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/git_sitrep.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="469"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><strong>A note on expiring tokens:</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Setting an expiration date on personal access tokens is highly recommended in order to keep your information secure. GitHub will send you an email when it’s time to regenerate a token that’s about to expire. Follow the email prompts, then use <code>gitcreds::gitcreds_set()</code> to reset your token.</p>
 </div>
 </div>
 </section>
 <section id="install-Cyberduck" class="level3">
 <h3 class="anchored" data-anchor-id="install-Cyberduck">10. Install Cyberduck</h3>
-<p>Cyberduck is a program that allows you to browse files on a remote server. <a href="https://cyberduck.io/">Download here</a>.</p>
+<p>Cyberduck is a program that allows you to browse files on a remote server. <a href="https://cyberduck.io/" target="_blank">Download here</a>.</p>
 </section>
 <section id="install-VPN" class="level3">
 <h3 class="anchored" data-anchor-id="install-VPN">11. Install UCSB’s Ivanti Campus VPN (Virtual Private Network)</h3>
 <p>For secure remote access to the UCSB’s campus network when you’re not physically present on campus, you’ll need to download and install the Ivanti VPN client. This will allow you to access UCSB’s technology resources (including servers, journal subscriptions, etc.) anytime and from anywhere.</p>
-<p>See this <a href="https://it.ucsb.edu/network-infrastructure-services/ivanti-connect-secure-campus-vpn">UCSB Information Technology article</a> for directions on how to get started.</p>
+<p>See this <a href="https://it.ucsb.edu/network-infrastructure-services/ivanti-connect-secure-campus-vpn" target="_blank">UCSB Information Technology article</a> for directions on how to get started.</p>
 </section>
 <section id="Slack" class="level3">
 <h3 class="anchored" data-anchor-id="Slack">12. Create your Slack account and join MEDS</h3>
 <ul>
-<li><p><a href="https://join.slack.com/t/ucsb-meds/shared_invite/zt-so8oh7xf-w41bSnbBWAiMOXKPf5j_qw">Click here</a> to join our UCSB-MEDS Slack Workspace</p></li>
+<li><p><a href="https://join.slack.com/t/ucsb-meds/shared_invite/zt-so8oh7xf-w41bSnbBWAiMOXKPf5j_qw" target="_blank">Click here</a> to join our UCSB-MEDS Slack Workspace</p></li>
 <li><p>Customize your profile with your name and photo (adding a photo helps instructors and TAs learn your names more quickly!).</p></li>
 <li><p>Join the summer course channels (<code>#eds-212</code>, <code>#eds-221</code>, <code>#eds-214</code>, <code>#eds-217</code>)</p></li>
 </ul>
@@ -583,13 +585,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="Google-apps" class="level3">
 <h3 class="anchored" data-anchor-id="Google-apps">13. Access Google apps through your <span class="citation" data-cites="ucsb.edu">@ucsb.edu</span> account</h3>
-<p>Once enrolled and your UCSBnetID is activated, you will have access to your <a href="https://www.connect.ucsb.edu/usage">UCSB Connect Account</a> which provides email, calendaring, and collaboration services. <em>You must use this account (UCSBnetID@ucsb.edu) to log in and access all of your Google Apps (including Google Calendar, Google Drive, etc.).</em></p>
-<p>The <a href="https://calendar.google.com/calendar/u/0/embed?src=c_1886ai526iqschc9mnpj6cu753n60@resource.calendar.google.com&amp;ctz=America/Los_Angeles"><strong>MEDS Google Calendar</strong></a> contains all classes and events relevant for our MEDS students. Feel free to add this to your calendar if you find it helpful. To do so, log in to <a href="https://www.google.com/calendar">Google Calendar</a> using your <span class="citation" data-cites="ucsb.edu">@ucsb.edu</span> credentials &gt; Click on the <code>+</code> next to “Other calendars” on the left-hand side of your screen and choose “Browse resources” &gt; Click the drop down arrow next to “bren” and check the box next to “bren-calendar-meds”</p>
+<p>Once enrolled and your UCSBnetID is activated, you will have access to your <a href="https://www.connect.ucsb.edu/usage" target="_blank">UCSB Connect Account</a> which provides email, calendaring, and collaboration services. <em>You must use this account (UCSBnetID@ucsb.edu) to log in and access all of your Google Apps (including Google Calendar, Google Drive, etc.).</em></p>
+<p>The <a href="https://calendar.google.com/calendar/u/0/embed?src=c_1886ai526iqschc9mnpj6cu753n60@resource.calendar.google.com&amp;ctz=America/Los_Angeles" target="_blank"><strong>MEDS Google Calendar</strong></a> contains all classes and events relevant for our MEDS students. Feel free to add this to your calendar if you find it helpful. To do so, log in to <a href="https://www.google.com/calendar" target="_blank">Google Calendar</a> using your <span class="citation" data-cites="ucsb.edu">@ucsb.edu</span> credentials &gt; Click on the <code>+</code> next to “Other calendars” on the left-hand side of your screen and choose “Browse resources” &gt; Click the drop down arrow next to “bren” and check the box next to “bren-calendar-meds”</p>
 </section>
 <section id="Access-IDs" class="level3">
 <h3 class="anchored" data-anchor-id="Access-IDs">14. Request key card access to Bren / NCEAS</h3>
-<p>New students must <a href="https://www.accessid.ucsb.edu/">request an Access ID Card</a> (aka your UCSB photo identification), which are available for pickup at the <a href="https://www.ucen.ucsb.edu/">UCEN</a> 24 hours after your request is made. We recommend submitting your request before summer orientation, so that it’s ready for pickup during your first day on campus.</p>
-<p>Once you receive your Access ID Card, you must complete <a href="https://bren.formstack.com/forms/buildingsecurity">this form</a> to gain key card access to Bren (after hours) and NCEAS (all hours).</p>
+<p>New students must <a href="https://www.accessid.ucsb.edu/" target="_blank">request an Access ID Card</a> (aka your UCSB photo identification), which are available for pickup at the <a href="https://www.ucen.ucsb.edu/" target="_blank">UCEN</a> 24 hours after your request is made. We recommend submitting your request before summer orientation, so that it’s ready for pickup during your first day on campus.</p>
+<p>Once you receive your Access ID Card, you must complete <a href="https://bren.formstack.com/forms/buildingsecurity" target="_blank">this form</a> to gain key card access to Bren (after hours) and NCEAS (all hours).</p>
 <p><br></p>
 <div class="center-text body-text-l dark-blue-text">
 <p><strong><em>~ END Installation Guide ~</em></strong></p>
