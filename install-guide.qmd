@@ -55,13 +55,9 @@ Anaconda is a distribution of the Python programming language that aims to simpl
 ::: {.panel-tabset}
 ## {{< fa brands apple >}} Mac
 
-Click here to download Graphical Installer for MacOS:
+Download the [Graphical Installer](https://www.anaconda.com/docs/getting-started/anaconda/install/overview){target="_blank"} for MacOS.
 
--   [For Apple Silicon Chip (M1, M2, etc.)](https://repo.anaconda.com/archive/Anaconda3-2025.06-0-MacOSX-arm64.pkg){target="_blank"}
-
--   [For Intel Chip](https://repo.anaconda.com/archive/Anaconda3-2025.06-0-MacOSX-x86_64.pkg){target="_blank"}
-
-This might pop open a new tab with a “redirecting you to…” phrase, but Anaconda should be downloading at the same time. It might take a couple minutes. After it’s downloaded, click it and hit Allow if you see the following:
+This might pop open a new tab with a “redirecting you to…” phrase, but Anaconda should be downloading at the same time. It might take a couple minutes. After it’s downloaded, click it and hit "Allow" if you see the following:
 
 ```{r}
 #| echo: false
@@ -73,7 +69,7 @@ Follow the installation steps to complete Anaconda installation. You will accept
 
 ## {{< fa brands windows >}} Windows
 
-[Click here to download the 64-bit Graphical Installer Anaconda for Windows](https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Windows-x86_64.exe){target="_blank"}. Run the executable to install, which will look something like this:
+Download the [Graphical Installer](https://www.anaconda.com/docs/getting-started/anaconda/install/overview){target="_blank"} for Windows. Run the executable to install, which will look something like this:
 
 ```{r}
 #| echo: false
