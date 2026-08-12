@@ -262,6 +262,12 @@ This means that in order to push your work (files, scripts, etc.) from your lapt
 install.packages(“usethis”)
 ```
 
+::: {.callout-tip}
+## Heads-up: If you copy-paste this code, you may get an error. 
+
+Some documents convert straight quotes (`"`) into curly "smart quotes" that R won't recognize. If that happens, retype the quote marks by hand.
+:::
+
 A lot of scary looking red text will show up while this is installing - don’t panic. If you get to the end and see something like below (with no error) it’s installed successfully.
 
 ```{r}
