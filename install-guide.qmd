@@ -17,7 +17,7 @@ Download the latest version of R for your operating system at [cloud.r-project.o
 
 ### 2. Install Positron {#install-Positron}
 
-While R is a programming language, Positron is a software application (often referred to as an IDE, **I**ntegrated **D**evelopment **E**nvironment) that provides a user-friendly workspace for writing and running code. In addition to R, Positron also supports Python and other programming languages, making it a flexible tool for data science and scientific computing. If you've used RStudio in the past, you'll notice a lot of similar features in Positron (it was created by the company behind RStudio, [Posit](https://posit.co/!{target="_blank"})), as well as improved support for multiple languages and newer development tools.
+While R is a programming language, Positron is a software application (often referred to as an IDE, **I**ntegrated **D**evelopment **E**nvironment) that provides a user-friendly workspace for writing and running code. In addition to R, Positron also supports Python and other programming languages, making it a flexible tool for data science and scientific computing. If you've used RStudio in the past, you'll notice a lot of similar features in Positron (it was created by the company behind RStudio, [Posit](https://posit.co/!%7Btarget=%22_blank%22%7D)), as well as improved support for multiple languages and newer development tools.
 
 To install Positron, visit [positron.posit.co/install](https://positron.posit.co/install.html){target="_blank"} and follow the instructions. If you already have Positron installed, it'll automatically check for updates from Posit's channel of monthly releases and install the new version in the background. To open Positron, click on the app logo that looks like:
 
@@ -39,20 +39,20 @@ Several of the following installation steps will ask you to run commands in the 
 knitr::include_graphics("images/positron-map.jpeg")
 ```
 
-### 3. *(Mac users only)* Install Command Line Tools & XQuartz 
+### 3. *(Mac users only)* Install Command Line Tools & XQuartz
 
 {{< fa brands apple >}} Mac users should install the following tools, which are required for some R package installations:
 
 -   **Command Line Tools:** Run `xcode-select --install` in the Positron Terminal
 -   **XQuartz:** Download from [xquartz.org](https://www.xquartz.org/){target="_blank"}
 
-*{{< fa brands windows >}} Windows users: Command Line Tools are pre-installed and XQuartz is not required.*
+{{< fa brands windows >}} *Windows users: Command Line Tools are pre-installed and XQuartz is not required.*
 
 ### 4. Install Python via the Anaconda distribution {#install-Anaconda}
 
 Anaconda is a distribution of the Python programming language that aims to simplify package management and deployment. You'll need to download the Graphical Installer, which provides a graphical user interface (GUI) to facilitate writing code. Choose the option for your operating system:
 
-::: {.panel-tabset}
+::: panel-tabset
 ## {{< fa brands apple >}} Mac
 
 Download the [Graphical Installer](https://www.anaconda.com/docs/getting-started/anaconda/install/overview){target="_blank"} for MacOS.
@@ -106,7 +106,7 @@ knitr::include_graphics("images/anaconda7.png")
 ```
 :::
 
-:::: {.callout-important}
+:::: callout-important
 ## IMPORTANT: Check that Anaconda is installed properly.
 
 By default, installation should add "conda" to your system path so you should not have any issues. Open Positron and run the following in the Terminal to confirm:
@@ -122,7 +122,7 @@ conda info
 
 #### Troubleshooting steps
 
-::: {.panel-tabset}
+::: panel-tabset
 ## {{< fa brands apple >}} Mac
 
 Open Positron and run the following in the Terminal to initialize conda. This will add "conda" to your shell profile:
@@ -166,7 +166,6 @@ conda
 ```
 
 If it returns any information, you're all set. If it still doesn't recognize it, ask for help.
-
 :::
 ::::
 
@@ -181,9 +180,27 @@ Visual Studio Code (aka VS Code) is another language-agnostic IDE. It works and 
 knitr::include_graphics("images/vs-code.png")
 ```
 
+Once you have VS Code installed, install the necessary extensions by selecting the icon with four squares on the left panel and searching for the following:
+
+-   Quarto
+
+-   Jupyter
+
+-   Python
+
+::: callout-important
+## IMPORTANT: For Windows users, you must set your "conda path" in order to run Python code.
+
+VS Code needs to know where Python and Conda live on your computer in order for you to run Python. To set your conda path, do the following:
+
+-   Open VS Code \> Settings (Gear icon in the bottom left corner) \> Extensions \> Python.
+-   Under "conda path", point it to `C:\ProgramData\anaconda3\Scripts\conda.exe`
+-   Restart VS Code.
+:::
+
 ### 6. Create a GitHub account {#GitHub}
 
-GitHub is a cloud-based platform where data scientists and developers can store, share, and collaborate on code. If you don’t already have a GitHub account, go to [https://github.com](https://github.com){target="_blank"} and create one. Check out Jenny Bryan's [Happy Git with R, Ch. 4](https://happygitwithr.com/github-acct.html){target="_blank"} for some helpful considerations when choosing a username. We suggest that you use a *personal email*, rather than a school or work email (which may become deactivated after you graduate or change jobs). 
+GitHub is a cloud-based platform where data scientists and developers can store, share, and collaborate on code. If you don’t already have a GitHub account, go to [https://github.com](https://github.com){target="_blank"} and create one. Check out Jenny Bryan's [Happy Git with R, Ch. 4](https://happygitwithr.com/github-acct.html){target="_blank"} for some helpful considerations when choosing a username. We suggest that you use a *personal email*, rather than a school or work email (which may become deactivated after you graduate or change jobs).
 
 <!-- when setting up your account (rather than your @ucsb.edu *email*, which will be deactivated after you graduate). -->
 
@@ -193,7 +210,7 @@ Git is a version control system that lives on our local computer(s) and is used 
 
 -   Open Positron. In the Terminal, run the following command (choose the option for your operating system):
 
-::: {.panel-tabset}
+::: panel-tabset
 ## {{< fa brands apple >}} Mac
 
 ```{bash filename="Positron Terminal"}
@@ -211,15 +228,17 @@ where git
 
 -   If you get something that looks like a file path to git on your computer (e.g. `/usr/local/bin/git` on a Mac, `C:\Program Files\Git\mingw64\bin\git.exe` on Windows, though it could differ slightly on your computer), then you have git installed. If you instead get no response at all, you should download & install git here: [git-scm.com/downloads](https://git-scm.com/downloads){target="_blank"}
 
+```{=html}
 <!-- ::: callout-note
 ## **An aside:** We'll be using git *a lot* throughout MEDS.
 
 GitHub's [Git Guides](https://github.com/git-guides) are a really wonderful resource to refer to!
 ::: -->
+```
 
 ### 8. Configure git {#configure-git}
 
-- Open Positron. In the Terminal, run the following commands (by pressing **return** after each line). Be sure to replace the username (keep the quotation marks!) with *your* GitHub username and the email with the email you used for your GitHub account.
+-   Open Positron. In the Terminal, run the following commands (by pressing **return** after each line). Be sure to replace the username (keep the quotation marks!) with *your* GitHub username and the email with the email you used for your GitHub account.
 
 ```{bash filename="Positron Terminal"}
 #| eval: false
@@ -262,8 +281,8 @@ This means that in order to push your work (files, scripts, etc.) from your lapt
 install.packages(“usethis”)
 ```
 
-::: {.callout-tip}
-## Heads-up: If you copy-paste this code, you may get an error. 
+::: callout-tip
+## Heads-up: If you copy-paste this code, you may get an error.
 
 Some documents convert straight quotes (`"`) into curly "smart quotes" that R won't recognize. If that happens, retype the quote marks by hand.
 :::
@@ -333,7 +352,7 @@ Does it return information about your connected GitHub account that looks someth
 knitr::include_graphics("images/git_sitrep.png")
 ```
 
-::: {.callout-note}
+::: callout-note
 ## **A note on expiring tokens:**
 
 Setting an expiration date on personal access tokens is highly recommended in order to keep your information secure. GitHub will send you an email when it's time to regenerate a token that's about to expire. Follow the email prompts, then use `gitcreds::gitcreds_set()` to reset your token.
